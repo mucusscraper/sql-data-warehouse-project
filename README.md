@@ -23,6 +23,13 @@ This project involves:
 ---
 ## 🚀 Project Requirements
 
+### Postgres Database
+Create the database manually:
+
+```sql
+CREATE DATABASE DataWarehouse;
+```
+
 ### Building the Data Warehouse (Data Engineering)
 
 #### Objective
