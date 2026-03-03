@@ -4,7 +4,7 @@ This project demonstrates the design and implementation of a modern Data Warehou
 
 The solution follows the Medallion Architecture (Bronze, Silver, Gold) approach and applies industry best practices in Data Engineering, ETL design, data modeling, and analytics.
 
-![Data Architecture](docs/data_architecture.png)
+![Data Architecture](docs/layers.png)
 ---
 
 ## 🚀 Project Requirements
@@ -16,7 +16,8 @@ Create the database manually:
 CREATE DATABASE DataWarehouse;
 ```
 
-and execute using Postgres the SQL scripts in scripts folder in numerical order to generate the Layers.
+### Postgres Scripts
+Eecute using Postgres the SQL scripts in scripts folder in numerical order to generate the Layers.
 Order: 001_create_layers_schemas.sql -> 002_create_bronze_tables.sql -> 003_bulk_insert_bronze_layer.sql -> 004_create_silver_tables.sql -> 005_insert_silver_layer.sql -> 006_create_gold_layer_views.sql
 
 ### Building the Data Warehouse (Data Engineering)
