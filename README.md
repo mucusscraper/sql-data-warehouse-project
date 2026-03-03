@@ -1,26 +1,12 @@
 # SQL Datawarehouse Project
 
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics. This is a guided project teached by Data Engineer and Data Analyst [Baraa](https://www.youtube.com/@DataWithBaraa)
+This project demonstrates the design and implementation of a modern Data Warehouse using PostgreSQL, integrating CRM and ERP data into a unified analytical environment.
 
+The solution follows the Medallion Architecture (Bronze, Silver, Gold) approach and applies industry best practices in Data Engineering, ETL design, data modeling, and analytics.
+
+![Data Architecture](docs/data_architecture.png)
 ---
-## 📖 Project Overview
 
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
-- Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
-
----
 ## 🚀 Project Requirements
 
 ### Postgres Database
@@ -30,10 +16,13 @@ Create the database manually:
 CREATE DATABASE DataWarehouse;
 ```
 
+and execute using Postgres the SQL scripts in scripts folder in numerical order to generate the Layers.
+Order: 001_create_layers_schemas.sql -> 002_create_bronze_tables.sql -> 003_bulk_insert_bronze_layer.sql -> 004_create_silver_tables.sql -> 005_insert_silver_layer.sql -> 006_create_gold_layer_views.sql
+
 ### Building the Data Warehouse (Data Engineering)
 
 #### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using Postgres to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### Specifications
 - **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
@@ -44,12 +33,4 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
-
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
-
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/daniel-oliveira-30785b1ba)

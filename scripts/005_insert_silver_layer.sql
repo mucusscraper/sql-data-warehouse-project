@@ -118,14 +118,14 @@ BEGIN;
     truncate table silver.erp_loc_a101;
     insert into silver.erp_loc_a101(
         cid,
-        cntry)
-    select distinct
+        cntry)        
+    select
+    replace(cid,'-','') cid,
     case when trim(cntry)= 'DE' then 'Germany'
 	    when trim(cntry) in ('US','USA') then 'United States'
 	    when trim(cntry) = '' or cntry is null then 'n/a'
 	    else trim(cntry)
-    end as cntry,
-    replace(cid,'-','') cid
+    end as cntry
     from bronze.erp_loc_a101;
     truncate table silver.erp_px_cat_g1v2;
     insert into silver.erp_px_cat_g1v2(
